@@ -30,7 +30,7 @@ remove_bconsole_commands_from_output()
 {
     FILE="$1"
     # remove first and last line from file
-    sed -i '.bak' -e '1d' -e '$ d' ${FILE}
+    sed -i'.bak' -e '1d' -e '$ d' ${FILE}
 }
 
 strip_config()
