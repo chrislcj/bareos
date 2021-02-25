@@ -232,5 +232,19 @@ TEST(ConfigParser_Dir, CFG_TYPE_FNAME)
   test_config_directive_type(test_CFG_TYPE_FNAME);
 }
 
+void test_CFG_TYPE_TIME(DirectorResource* me)
+{
+  /*
+   * Heartbeat Interval = 1 years 2 months 3 weeks 4 days 5 hours 6 minutes 7 seconds
+   */
+  EXPECT_EQ(me->heartbeat_interval, 38898367);
+}
+
+TEST(ConfigParser_Dir, CFG_TYPE_TIME)
+{
+  test_config_directive_type(test_CFG_TYPE_TIME);
+}
+
+
 
 }  // namespace directordaemon
